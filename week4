@@ -1,0 +1,168 @@
+package termProject2023;
+import java.util.Random;
+public class brainCenter {
+
+	public static void main(String[] args) {   //main runs first
+		// TODO Auto-generated method stub
+
+		//System.out.println("MAIN BEGINNING NOW......");
+		
+		//Random r = new Random();
+		
+		Stock l = new Stock();
+		l.printPriceAndIPOQTY();
+		
+		//System.out.println("stock price is " + l.price + " and ipoQty is " + l.ipoQty); //proof of working random
+		
+		
+		// POPULATE THIS STOCK WITH SOME INFORMATION;
+		
+//		l.industry = "locomotive"; //string, or word, string of characters
+//		
+//		l.price = 55.0; //price is a double (floating point, hence .0)
+//		
+//		l.ipoQty = 5000000; //integer, no decimals
+//		
+//		l.symbol = "GEL"; //for our sim, we'll assign random determined symbol names
+//		
+//		System.out.println("stock named " + l.symbol + " is priced at $" + l.price );
+//		
+	}
+
+}package termProject2023;
+import java.util.Random;
+public class brainCenter {
+
+	public static void main(String[] args) {   //main runs first
+		// TODO Auto-generated method stub
+
+		//System.out.println("MAIN BEGINNING NOW......");
+		
+		//Random r = new Random();
+		
+		Stock l = new Stock();
+		l.printPriceAndIPOQTY();
+		
+		//System.out.println("stock price is " + l.price + " and ipoQty is " + l.ipoQty); //proof of working random
+		
+		
+		// POPULATE THIS STOCK WITH SOME INFORMATION;
+		
+//		l.industry = "locomotive"; //string, or word, string of characters
+//		
+//		l.price = 55.0; //price is a double (floating point, hence .0)
+//		
+//		l.ipoQty = 5000000; //integer, no decimals
+//		
+//		l.symbol = "GEL"; //for our sim, we'll assign random determined symbol names
+//		
+//		System.out.println("stock named " + l.symbol + " is priced at $" + l.price );
+//		
+	}
+
+}
+
+
+
+package termProject2023;
+/**
+ * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE
+ * @author Justin
+ *
+ */
+import java.util.Random;
+
+public class Stock {    //this will list the variables that describe the stock in general
+
+	public String symbol; //a public variable is visible outside the class, by other classes
+	public double price;
+	public int ipoQty; //initial number of stock on sale
+	public String industry; 
+	
+	public Stock() // constructor, first thing that happens when an instance of this object is created
+	{
+		industry = "defense contracting";  //string or word which is a string of characters
+		
+		setStockPrice();
+		ipoQty = setIpoQty();  //this is the rv value from setIpoQty;  
+		
+		symbol = "GEL"; //for our sim , we'll assign randomly determined symbol names
+		
+	}
+	
+	public void printPriceAndIPOQTY()
+	{
+		System.out.println("price is now " + price);
+		System.out.println();
+		System.out.println("IPO Quantity is now " + ipoQty);
+	}
+	
+	private int setIpoQty()
+	{
+		int rv = 0;
+		Random r = new Random();
+		rv = r.nextInt(15000000); //ipo is a large number of stocks sold by a bank
+		//System.out.println("my ipo quantity is set to " + rv);
+		return rv;
+	}
+	
+	private void setStockPrice() //void returns nothing
+	{
+		Random p = new Random();
+		price = p.nextDouble() * 100;
+		//System.out.println("stock price is " + price); //proof of working randoms
+	}
+}
+package termProject2023;
+/**
+ * A STOCK REPRESENTS ONE SECURITY ON A STOCK EXCHANGE
+ * @author Justin
+ *
+ */
+import java.util.Random;
+
+public class Stock {    //this will list the variables that describe the stock in general
+
+	public String symbol; //a public variable is visible outside the class, by other classes
+	public double price;
+	public int ipoQty; //initial number of stock on sale
+	public String industry; 
+	
+	public Stock() // constructor, first thing that happens when an instance of this object is created
+	{
+		industry = "defense contracting";  //string or word which is a string of characters
+		
+		setStockPrice();
+		ipoQty = setIpoQty();  //this is the rv value from setIpoQty;  
+		
+		symbol = "GEL"; //for our sim , we'll assign randomly determined symbol names
+		
+	}
+	
+	public void printPriceAndIPOQTY()
+	{
+		System.out.println("price is now " + price);
+		System.out.println();
+		System.out.println("IPO Quantity is now " + ipoQty);
+	}
+	
+	private int setIpoQty()
+	{
+		int rv = 0;
+		Random r = new Random();
+		rv = r.nextInt(15000000); //ipo is a large number of stocks sold by a bank
+		//System.out.println("my ipo quantity is set to " + rv);
+		return rv;
+	}
+	
+	private void setStockPrice() //void returns nothing
+	{
+		Random p = new Random();
+		price = p.nextDouble() * 100;
+		//System.out.println("stock price is " + price); //proof of working randoms
+	}
+}
+
+
+
+
